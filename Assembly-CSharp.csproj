@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0AA81C5C-DAFC-7785-BF02-3B0E0C319436}</ProjectGuid>
+    <ProjectGuid>{70617B72-0C78-145F-B646-6F294A0D2D7B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,6 +58,9 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ShipMovement.cs" />
     <Compile Include="Assets\Scripts\AsteroidController.cs" />
+    <Compile Include="Assets\Scripts\DestroyerPoint.cs" />
+    <Compile Include="Assets\Scripts\ShipCase.cs" />
+    <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
