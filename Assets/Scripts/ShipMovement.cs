@@ -8,6 +8,7 @@ public class ShipMovement : MonoBehaviour
     public float movForce = 5f;
 
     private Rigidbody2D rb;
+    public GameObject projectile;
 
     void Start()
     {
@@ -23,6 +24,11 @@ public class ShipMovement : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             rb.AddForce((dir - transform.position) * Time.deltaTime * movForce);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            var shoot = (GameObject)Instantiate(projectile, transform.position, transform.rotation);
         }
     }
 }

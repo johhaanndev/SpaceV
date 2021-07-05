@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DestroyerPoint
   - Asteriod
+  - ScreenBoundaries
   layers:
   - Default
   - TransparentFX

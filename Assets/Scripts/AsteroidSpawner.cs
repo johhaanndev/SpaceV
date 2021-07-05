@@ -6,7 +6,9 @@ public class AsteroidSpawner : MonoBehaviour
 {
     public Transform[] spawnPoints;
     public GameObject asteroids;
+    public float cooldown = 1f;
     private float timeCounter = 0.0f;
+    
     
 
     // Start is called before the first frame update
@@ -19,7 +21,7 @@ public class AsteroidSpawner : MonoBehaviour
     void Update()
     {
         timeCounter += Time.deltaTime;
-        if (timeCounter >= 1.0f)
+        if (timeCounter >= cooldown)
         {
             timeCounter = 0f;
             var randomPoint = Random.RandomRange(0, spawnPoints.Length - 1);

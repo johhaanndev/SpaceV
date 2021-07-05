@@ -56,11 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ShipMovement.cs" />
-    <Compile Include="Assets\Scripts\AsteroidController.cs" />
-    <Compile Include="Assets\Scripts\DestroyerPoint.cs" />
     <Compile Include="Assets\Scripts\ShipCase.cs" />
+    <Compile Include="Assets\Scripts\ProjectileController.cs" />
+    <Compile Include="Assets\Scripts\ShipMovement.cs" />
     <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
+    <Compile Include="Assets\Scripts\AsteroidS\AsteroidController.cs" />
+    <Compile Include="Assets\Scripts\AsteroidS\HalfAsteroidController.cs" />
+    <Compile Include="Assets\Scripts\AudioFrecuency.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
