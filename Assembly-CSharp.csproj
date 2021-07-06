@@ -59,10 +59,12 @@
     <Compile Include="Assets\Scripts\ShipCase.cs" />
     <Compile Include="Assets\Scripts\ProjectileController.cs" />
     <Compile Include="Assets\Scripts\ShipMovement.cs" />
-    <Compile Include="Assets\Scripts\AsteroidSpawner.cs" />
-    <Compile Include="Assets\Scripts\AsteroidS\AsteroidController.cs" />
-    <Compile Include="Assets\Scripts\AsteroidS\HalfAsteroidController.cs" />
+    <Compile Include="Assets\Scripts\PercussionAsteroids\PercussionSpawner.cs" />
+    <Compile Include="Assets\Scripts\PercussionAsteroids\AsteroidController.cs" />
     <Compile Include="Assets\Scripts\AudioFrecuency.cs" />
+    <Compile Include="Assets\Scripts\SpawnPoint.cs" />
+    <Compile Include="Assets\Scripts\MelodyAsteroids\MelodySpawner.cs" />
+    <Compile Include="Assets\Scripts\MelodyAsteroids\MelodyAsteroid.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
