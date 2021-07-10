@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 619216444}
   m_Layer: 0
   m_Name: KickAsteroid
-  m_TagString: Asteriod
+  m_TagString: KickAsteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,5 +207,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  asteroidHalfPrefab: {fileID: 0}
+  clapParticles: {fileID: 1883267948008586083, guid: 86623005c5f8b3d4ea78b8322b762c0b, type: 3}
   force: 2000

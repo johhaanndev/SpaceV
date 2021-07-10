@@ -5,8 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - DestroyerPoint
-  - Asteriod
   - ScreenBoundaries
+  - KickAsteroid
+  - ClapAsteroid
   layers:
   - Default
   - TransparentFX
