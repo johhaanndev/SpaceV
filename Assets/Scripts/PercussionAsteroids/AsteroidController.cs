@@ -8,6 +8,7 @@ public class AsteroidController : MonoBehaviour
 
     public GameObject player;
     public GameObject clapParticles;
+    public GameObject midParticles;
 
     public float force;
     private Vector3 dir;
@@ -25,8 +26,6 @@ public class AsteroidController : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         rb.AddForce(dir * force);
-
-        //Invoke(nameof(DestroyGO), 4f);
     }
 
     private void DestroyGO()
@@ -41,15 +40,21 @@ public class AsteroidController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ScreenBoundaries"))
+        if (gameObject.CompareTag("ClapAsteroid"))
         {
+            var particles = (GameObject)Instantiate(clapParticles, transform.position, transform.rotation);
             DestroyGO();
         }
 
-        if (collision.gameObject.CompareTag("ClapAsteroid"))
+        if (gameObject.CompareTag("MidAsteroid"))
         {
-            var particles = (GameObject)Instantiate(clapParticles, transform.position, transform.rotation);
-            Destroy(collision.gameObject);
+            var particles = (GameObject)Instantiate(midParticles, transform.position, transform.rotation);
+            DestroyGO();
+        }
+
+        if (collision.gameObject.CompareTag("ScreenBoundaries"))
+        {
+            DestroyGO();
         }
     }
 }
