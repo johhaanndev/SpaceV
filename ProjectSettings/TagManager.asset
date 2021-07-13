@@ -8,6 +8,7 @@ TagManager:
   - ScreenBoundaries
   - KickAsteroid
   - ClapAsteroid
+  - MidAsteroid
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Scenary
+    uniqueID: 3651431833
+    locked: 0
+  - name: Asteroids
+    uniqueID: 2712445909
+    locked: 0
+  - name: Player
+    uniqueID: 1273949139
     locked: 0

@@ -16,9 +16,7 @@ public class PercussionSpawner : MonoBehaviour
 
     public GameObject midChannel;
     public GameObject midPrefab;
-    private bool midSpawned = false;
-
-    public float cooldown = 1f;    
+    private bool midSpawned = false; 
 
     // Start is called before the first frame update
     void Start()
