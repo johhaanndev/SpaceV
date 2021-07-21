@@ -35,4 +35,9 @@ _Asteroid Spawners at the beat_
 
 When playing, the level will spawn asteroids at the tempo of the song, differentiating kicks, claps even melody. But that can't be done only detecting the song audio clip, we would need some kind of equalizer to differentiate high, mid and low frecuencies. But there is an alternate way to separate the kicks from the claps, and that is by creating track channels.
 
-It might look a rusty method but it is easy and quick, at least for now. Track channels are created with FL Studio software, it can be done with the free version. Loading the main audio and putting, for example the default kick audio sound, anywhere in the track. Like this: 
+It might look a rusty method but it is easy and quick, at least for now. Track channels are created with FL Studio software, it can be done with the free version. Loading the main audio and putting, for example the default kick audio sound, anywhere in the track. Like this: https://imgur.com/Eav4SUN
+
+Render channel and after having all the channels rendered we get different audio sources: https://imgur.com/a/mAKi3yA
+
+The song game object will have a children for each track channel, and loudness will be detected in each channel. This way, kicks and claps are separated from the melody and lyrics properly.
+
