@@ -50,5 +50,8 @@ The spawner contains a list of spawn points. For each channel, it detects the lo
 ### Possible incoming features
 
 - Scoring system.
+- Death by impact.
 - Defense mechanic, like a force camp pushing all the close asteroids.
 - Optimize loudness detection so only 1 script is valid for any song.
+- Visual effects.
+- Art design.
