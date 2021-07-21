@@ -35,9 +35,20 @@ _Asteroid Spawners at the beat_
 
 When playing, the level will spawn asteroids at the tempo of the song, differentiating kicks, claps even melody. But that can't be done only detecting the song audio clip, we would need some kind of equalizer to differentiate high, mid and low frecuencies. But there is an alternate way to separate the kicks from the claps, and that is by creating track channels.
 
-It might look a rusty method but it is easy and quick, at least for now. Track channels are created with FL Studio software, it can be done with the free version. Loading the main audio and putting, for example the default kick audio sound, anywhere in the track. Like this: https://imgur.com/Eav4SUN
+It might look a rusty method but it is easy and quick, at least for now. Track channels are created with FL Studio software, it can be done with the free version. Loading the main audio and putting, for example the default kick audio sound, anywhere in the track. Like this:
+![Eav4SUN - Imgur](https://user-images.githubusercontent.com/71643284/126508267-f8223880-8b62-4d99-8ae5-88b3a14ec2c6.jpg)
 
-Render channel and after having all the channels rendered we get different audio sources: https://imgur.com/a/mAKi3yA
+Render channel and after having all the channels rendered we get different audio sources:
+![Captura](https://user-images.githubusercontent.com/71643284/126508127-6bfa05cf-1eb3-42c9-a551-904d9634a3ad.JPG)
+
 
 The song game object will have a children for each track channel, and loudness will be detected in each channel. This way, kicks and claps are separated from the melody and lyrics properly.
 
+The spawner contains a list of spawn points. For each channel, it detects the loudness and instantiate an asteroid in a random spawn point. Asteroids will move towards the player straight at the moment of the spawning. The further the player is from the spawn point, the faster will be the asteroid.
+
+
+### Possible incoming features
+
+- Scoring system.
+- Defense mechanic, like a force camp pushing all the close asteroids.
+- Optimize loudness detection so only 1 script is valid for any song.
