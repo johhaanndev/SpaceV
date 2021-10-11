@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class CollectableController : MonoBehaviour
 {
-    public int score;
+    [HideInInspector] public int score = 100;
+    public ScoreManager scoreCanvas;
+
+    private void Awake()
+    {
+        scoreCanvas = GameObject.Find("ScoreCanvas").GetComponent<ScoreManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log($"{score} points");
+            scoreCanvas.AddMineral();
             DestroyGO();
         }
     }

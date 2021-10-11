@@ -147,4 +147,5 @@ MonoBehaviour:
   player: {fileID: 0}
   clapParticles: {fileID: 1883267948008586083, guid: 86623005c5f8b3d4ea78b8322b762c0b, type: 3}
   midParticles: {fileID: 1883267948008586083, guid: 9ee3863fd781c284cb85aaf9e2dc0ed9, type: 3}
+  kickParticles: {fileID: 1883267948008586083, guid: c2391abeec091454e8996d915c72d96f, type: 3}
   force: 3000

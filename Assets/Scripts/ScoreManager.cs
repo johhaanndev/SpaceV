@@ -4,8 +4,10 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public GameObject scoreText;
+    public GameObject mineralText;
 
     private float score = 0;
+    private float mineralCount = 0;
     private float timeCounter = 0;
 
     // Start is called before the first frame update
@@ -22,7 +24,14 @@ public class ScoreManager : MonoBehaviour
         {
             score++;
             timeCounter = 0;
+            ShowScoreHUD();
+            ShowMineralHUD();
         }
+        
+    }
+
+    private void ShowScoreHUD()
+    {
         if (score < 10)
         {
             scoreText.GetComponent<Text>().text = $"Score: 00000{score}";
@@ -47,5 +56,37 @@ public class ScoreManager : MonoBehaviour
         {
             scoreText.GetComponent<Text>().text = $"Score: {score}";
         }
+    }
+
+    private void ShowMineralHUD()
+    {
+        if (mineralCount < 10)
+        {
+            mineralText.GetComponent<Text>().text = $"Minerals: 00{mineralCount}";
+        }
+        else if (mineralCount < 100)
+        {
+            mineralText.GetComponent<Text>().text = $"Minerals: 0{mineralCount}";
+        }
+        else if (mineralCount < 1000)
+        {
+            mineralText.GetComponent<Text>().text = $"Minerals: {mineralCount}";
+        }
+    }
+
+    public void AddMineral()
+    {
+        score += 100;
+        mineralCount++;
+    }
+
+    public void SubstractMineral(int cost)
+    {
+        mineralCount -= cost;
+    }
+
+    public float GetMineralCount()
+    {
+        return mineralCount;
     }
 }

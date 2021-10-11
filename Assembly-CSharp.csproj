@@ -57,14 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CollectableController.cs" />
-    <Compile Include="Assets\Scripts\ShipMovement.cs" />
-    <Compile Include="Assets\Scripts\PercussionAsteroids\PercussionSpawner.cs" />
+    <Compile Include="Assets\Scripts\ShipScripts\ShipMovement.cs" />
+    <Compile Include="Assets\Scripts\ScoreManager.cs" />
+    <Compile Include="Assets\Scripts\AsteroidsControllers\PercussionSpawner.cs" />
     <Compile Include="Assets\Scripts\ParticlesController.cs" />
-    <Compile Include="Assets\Scripts\PercussionAsteroids\AsteroidController.cs" />
+    <Compile Include="Assets\Scripts\AsteroidsControllers\AsteroidController.cs" />
     <Compile Include="Assets\Scripts\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\AudioFrecuency.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
-    <Compile Include="Assets\Scripts\ScoreManager.cs" />
+    <Compile Include="Assets\Scripts\ShipScripts\ShipAbility.cs" />
+    <Compile Include="Assets\Scripts\ShipScripts\AsteroidDestroyer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
