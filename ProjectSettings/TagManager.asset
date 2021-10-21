@@ -50,9 +50,12 @@ TagManager:
   - name: Scenary
     uniqueID: 3651431833
     locked: 0
-  - name: Asteroids
-    uniqueID: 2712445909
+  - name: Collectable
+    uniqueID: 1190722935
     locked: 0
   - name: Player
     uniqueID: 1273949139
+    locked: 0
+  - name: Asteroids
+    uniqueID: 2712445909
     locked: 0

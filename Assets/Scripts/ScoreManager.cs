@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    private ShipMovement ship;
+
     public GameObject scoreText;
     public GameObject mineralText;
 
@@ -13,21 +15,24 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ship = GameObject.Find("Player").GetComponent<ShipMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeCounter += Time.deltaTime;
-        if (timeCounter >= 0.1)
+        if (ship.GetAlive())
         {
-            score++;
-            timeCounter = 0;
-            ShowScoreHUD();
-            ShowMineralHUD();
+            timeCounter += Time.deltaTime;
+            if (timeCounter >= 0.1)
+            {
+                score++;
+                timeCounter = 0;
+            }
         }
-        
+
+        ShowScoreHUD();
+        ShowMineralHUD();
     }
 
     private void ShowScoreHUD()

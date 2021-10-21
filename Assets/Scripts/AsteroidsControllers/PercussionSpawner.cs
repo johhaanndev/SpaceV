@@ -30,7 +30,6 @@ public class PercussionSpawner : MonoBehaviour
         SpawnClapAsteroids();
         SpawnKickAsteroids();
         SpawnMidAsteroids();
-
     }
 
     private void SpawnClapAsteroids()

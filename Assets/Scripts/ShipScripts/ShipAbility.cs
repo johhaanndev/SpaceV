@@ -11,6 +11,8 @@ public class ShipAbility : MonoBehaviour
     public GameObject onCooldown;
     public GameObject destroyerArea;
 
+    private ShipMovement ship;
+
     public GameObject cooldownText;
 
     public int cost;
@@ -21,35 +23,39 @@ public class ShipAbility : MonoBehaviour
     void Start()
     {
         scoreManager = GameObject.Find("ScoreCanvas").GetComponent<ScoreManager>();
+        ship = gameObject.GetComponentInParent<ShipMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0f)
+        if (ship.GetAlive())
         {
-            timer = 0f;
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (timer > 0f)
+            timer -= Time.deltaTime;
+            if (timer <= 0f)
             {
-                onCooldown.SetActive(true);
-                Invoke(nameof(DeactivateCooldowntGameObject), 1f);
+                timer = 0f;
             }
-            else
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (scoreManager.GetMineralCount() >= cost)
+                if (timer > 0f)
                 {
-                    var destroyer = (GameObject)Instantiate(destroyerArea, transform.position, transform.rotation);
-                    scoreManager.SubstractMineral(cost);
-                    timer = cooldown;
+                    onCooldown.SetActive(true);
+                    Invoke(nameof(DeactivateCooldowntGameObject), 1f);
                 }
                 else
                 {
-                    notMineralEnough.SetActive(true);
-                    Invoke(nameof(DeactivateNotMineralEnoughtGameObject), 1f);
+                    if (scoreManager.GetMineralCount() >= cost)
+                    {
+                        var destroyer = (GameObject)Instantiate(destroyerArea, transform.position, transform.rotation);
+                        scoreManager.SubstractMineral(cost);
+                        timer = cooldown;
+                    }
+                    else
+                    {
+                        notMineralEnough.SetActive(true);
+                        Invoke(nameof(DeactivateNotMineralEnoughtGameObject), 1f);
+                    }
                 }
             }
         }

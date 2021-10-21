@@ -9,20 +9,64 @@ public class ShipMovement : MonoBehaviour
 
     private Rigidbody2D rb;
 
+    private bool alive = true;
+
+    public GameObject deathParticles;
+    private SpriteRenderer spriteRenderer;
+    private PolygonCollider2D polygonCollider;
+
+    public AudioSource musicStop;
+    public AudioSource gameOverSong;
+    private AudioSource currentSong;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
+        polygonCollider = gameObject.GetComponentInChildren<PolygonCollider2D>();
+        currentSong = GameObject.Find("Song").GetComponent<AudioSource>();
     }
 
     void Update()
     {
+        if (alive)
+            MoveControls();
+    }
+
+    private void MoveControls()
+    {
         var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + angleOffset;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        
+
         if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Z))
         {
             rb.AddForce((dir - transform.position) * Time.deltaTime * movForce);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Contains("Asteroid"))
+        {
+            alive = false;
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        var particles = (GameObject)Instantiate(deathParticles, transform.position, transform.rotation);
+        spriteRenderer.enabled = false;
+        polygonCollider.enabled = false;
+        musicStop.Play();
+        gameOverSong.Play();
+        currentSong.Stop();
+    }
+
+    public bool GetAlive()
+    {
+        return alive;
     }
 }
