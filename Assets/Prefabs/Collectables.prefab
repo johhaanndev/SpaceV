@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   scoreCanvas: {fileID: 0}
+  particles: {fileID: 1883267948008586083, guid: e7e6efed8631b9f4faababb433735347, type: 3}
 --- !u!50 &1513399340
 Rigidbody2D:
   serializedVersion: 4

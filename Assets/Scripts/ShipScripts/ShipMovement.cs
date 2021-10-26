@@ -19,6 +19,8 @@ public class ShipMovement : MonoBehaviour
     public AudioSource gameOverSong;
     private AudioSource currentSong;
 
+    public GameObject gameOverCanvas;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -57,6 +59,7 @@ public class ShipMovement : MonoBehaviour
 
     private void GameOver()
     {
+        gameOverCanvas.SetActive(true);
         var particles = (GameObject)Instantiate(deathParticles, transform.position, transform.rotation);
         spriteRenderer.enabled = false;
         polygonCollider.enabled = false;

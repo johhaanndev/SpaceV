@@ -6,6 +6,7 @@ public class CollectableController : MonoBehaviour
 {
     [HideInInspector] public int score = 100;
     public ScoreManager scoreCanvas;
+    public GameObject particles;
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class CollectableController : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             scoreCanvas.AddMineral();
+            var particlesInstance = (GameObject)Instantiate(particles, transform.position, transform.rotation);
             DestroyGO();
         }
     }

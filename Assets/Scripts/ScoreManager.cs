@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     private ShipMovement ship;
+    private ShipAbility shipAbility;
 
     public GameObject scoreText;
     public GameObject mineralText;
@@ -12,10 +13,15 @@ public class ScoreManager : MonoBehaviour
     private float mineralCount = 0;
     private float timeCounter = 0;
 
+    public Image mineralBar;
+    private float abilityCost;
+
     // Start is called before the first frame update
     void Start()
     {
         ship = GameObject.Find("Player").GetComponent<ShipMovement>();
+        shipAbility = GameObject.Find("Player").GetComponent<ShipAbility>();
+        abilityCost = shipAbility.cost;
     }
 
     // Update is called once per frame
@@ -30,7 +36,7 @@ public class ScoreManager : MonoBehaviour
                 timeCounter = 0;
             }
         }
-
+        mineralBar.fillAmount = mineralCount / abilityCost;
         ShowScoreHUD();
         ShowMineralHUD();
     }
