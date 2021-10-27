@@ -60,7 +60,7 @@ public class ShipAbility : MonoBehaviour
             }
         }
 
-        cooldownText.GetComponent<Text>().text = $"COOLDOWN: {(int)timer}";
+        cooldownText.GetComponent<Text>().text = $"COOLDOWN: {(int)timer}"; 
     }
 
     private void DeactivateNotMineralEnoughtGameObject()

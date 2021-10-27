@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angleOffset: 270
-  movForce: 100
+  movForce: 150
   deathParticles: {fileID: 1883267948008586083, guid: a1165fc990257bb4788994d7de2a3790, type: 3}
   musicStop: {fileID: 0}
   gameOverSong: {fileID: 0}
