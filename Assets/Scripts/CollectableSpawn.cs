@@ -11,7 +11,7 @@ public class CollectableSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        beatsChannel = GameObject.Find("Beats");
     }
 
     // Update is called once per frame

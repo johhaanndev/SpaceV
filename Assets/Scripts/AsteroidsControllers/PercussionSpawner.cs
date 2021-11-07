@@ -6,22 +6,36 @@ public class PercussionSpawner : MonoBehaviour
 {
     public List<Transform> spawnPoints;
 
-    public GameObject kickChannel;
+    private GameObject song;
+
+    private GameObject kickChannel;
     public GameObject kickPrefab;
     private bool kickSpawned = false;
 
-    public GameObject clapChannel;
+    private GameObject clapChannel;
     public GameObject clapPrefab;
     private bool clapSpawned = false;
 
-    public GameObject midChannel;
+    private GameObject midChannel;
     public GameObject midPrefab;
-    private bool midSpawned = false; 
+    private bool midSpawned = false;
+
+    private GameObject beatChannel;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        song = GameObject.Find("Song");
+        kickChannel = GameObject.Find("Kicks");
+        clapChannel = GameObject.Find("Claps");
+        midChannel = GameObject.Find("Mids");
+        beatChannel = GameObject.Find("Beats");
+
+        song.GetComponent<AudioSource>().Play();
+        kickChannel.GetComponent<AudioSource>().Play();
+        clapChannel.GetComponent<AudioSource>().Play();
+        midChannel.GetComponent<AudioSource>().Play();
+        beatChannel.GetComponent<AudioSource>().Play();
     }
 
     // Update is called once per frame
