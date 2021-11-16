@@ -28,7 +28,7 @@ public class AudioFrecuency : MonoBehaviour
 
     private void Update()
     {
-        if (SceneManager.GetActiveScene().name.Equals("GamePlayScene"))
+        if (SceneManager.GetActiveScene().name.Equals("GamePlayScene") || SceneManager.GetActiveScene().name.Equals("JSONconverter"))
         {
             currentUpdateTime += Time.deltaTime;
             if (currentUpdateTime >= updateStep)

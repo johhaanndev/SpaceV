@@ -10,4 +10,9 @@ public class GameOverButtons : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void MainMenuButton()
+    {
+        SceneManager.LoadScene("MusicSelection");
+    }
 }

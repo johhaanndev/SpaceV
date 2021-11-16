@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\ShipScripts\AsteroidDestroyer.cs" />
     <Compile Include="Assets\Scripts\Buttons\GameOverButtons.cs" />
     <Compile Include="Assets\Scripts\ShipScripts\ShipAbility.cs" />
+    <Compile Include="Assets\Scripts\SongMenus\SongScript.cs" />
     <Compile Include="Assets\Scripts\CollectableController.cs" />
     <Compile Include="Assets\Scripts\ShipScripts\ShipMovement.cs" />
     <Compile Include="Assets\Scripts\SongsManager\FinishSong.cs" />
@@ -68,9 +69,11 @@
     <Compile Include="Assets\Scripts\AsteroidsControllers\AsteroidController.cs" />
     <Compile Include="Assets\Scripts\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\AudioFrecuency.cs" />
-    <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
     <Compile Include="Assets\Scripts\SongMenus\SongReadyToSend.cs" />
-    <Compile Include="Assets\Scripts\SongMenus\SongScript.cs" />
+    <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
+    <Compile Include="Assets\Scripts\SaveSongData\SaveSongData.cs" />
+    <Compile Include="Assets\Scripts\SaveSongData\ClipData.cs" />
+    <Compile Include="Assets\Scripts\SaveSongData\SaveManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
