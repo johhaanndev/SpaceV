@@ -1,105 +1,228 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class PercussionSpawner : MonoBehaviour
 {
     public List<Transform> spawnPoints;
 
+    //private GameObject kickChannel;
+    //private bool kickSpawned = false;
+    //private GameObject clapChannel;
+    //private bool clapSpawned = false;
+    //private GameObject midChannel;
+    //private bool midSpawned = false;
+
     private GameObject song;
 
-    private GameObject kickChannel;
+    public List<float> kickTimer;
+    public List<float> clapTimer;
+    public List<float> midTimer;
+
     public GameObject kickPrefab;
-    private bool kickSpawned = false;
-
-    private GameObject clapChannel;
     public GameObject clapPrefab;
-    private bool clapSpawned = false;
-
-    private GameObject midChannel;
     public GameObject midPrefab;
-    private bool midSpawned = false;
 
-    private GameObject beatChannel;
+    private string directory = "Assets/Music/SongsData";
+    private string songFolder;
+    private string kickName;
+    private string clapName;
+    private string midName;
 
     // Start is called before the first frame update
     void Start()
     {
         song = GameObject.Find("Song");
-        kickChannel = GameObject.Find("Kicks");
-        clapChannel = GameObject.Find("Claps");
-        midChannel = GameObject.Find("Mids");
-        beatChannel = GameObject.Find("Beats");
+        songFolder = song.GetComponent<AudioSource>().clip.name;
+        kickName = "Kicks - " + songFolder;
+        clapName = "Claps - " + songFolder;
+        midName = "Mids - " + songFolder;
 
-        song.GetComponent<AudioSource>().Play();
-        kickChannel.GetComponent<AudioSource>().Play();
-        clapChannel.GetComponent<AudioSource>().Play();
-        midChannel.GetComponent<AudioSource>().Play();
-        beatChannel.GetComponent<AudioSource>().Play();
+        kickTimer = LoadKickDataFromJson();
+        clapTimer = LoadClapDataFromJson();
+        midTimer = LoadMidDataFromJson();
+
+        StartCoroutine(nameof(SpawnKicks));
+        StartCoroutine(nameof(SpawnClaps));
+        StartCoroutine(nameof(SpawnMids));
+
+        //kickChannel = GameObject.Find("Kicks");
+        //clapChannel = GameObject.Find("Claps");
+        //midChannel = GameObject.Find("Mids");
+
+        //song.GetComponent<AudioSource>().Play();
+        //kickChannel.GetComponent<AudioSource>().Play();
+        //clapChannel.GetComponent<AudioSource>().Play();
+        //midChannel.GetComponent<AudioSource>().Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        SpawnClapAsteroids();
-        SpawnKickAsteroids();
-        SpawnMidAsteroids();
+        //SpawnClapAsteroids();
+        //SpawnKickAsteroids();
+        //SpawnMidAsteroids();
     }
 
-    private void SpawnClapAsteroids()
+    private List<float> LoadKickDataFromJson()
     {
-        var clapLoudness = clapChannel.GetComponent<AudioFrecuency>().clipLoudness;
+        string fileLocation = $"{directory}/{songFolder}/{kickName}.txt";
 
-        if (!clapSpawned)
+        ClipData clip = new ClipData();
+
+        if (File.Exists(fileLocation))
         {
-            if (clapLoudness >= 0.1f)
-            {
-                clapSpawned = true;
-                var randomPoint = Random.Range(0, spawnPoints.Count - 1);
-                var asteroid = (GameObject)Instantiate(clapPrefab, spawnPoints[randomPoint]);
-            }
+            Debug.Log("File exists");
+            string json = File.ReadAllText(fileLocation);
+            clip = JsonUtility.FromJson<ClipData>(json);
+            return clip.times;
         }
         else
         {
-            if (clapLoudness < 0.1f) clapSpawned = false;
+            Debug.LogError($"No such file found: {fileLocation}");
         }
+
+        return new List<float>();
     }
 
-    private void SpawnKickAsteroids()
+    private List<float> LoadClapDataFromJson()
     {
-        var kickLoudness = kickChannel.GetComponent<AudioFrecuency>().clipLoudness;
+        string fileLocation = $"{directory}/{songFolder}/{clapName}.txt";
 
-        if (!kickSpawned)
+        ClipData clip = new ClipData();
+
+        if (File.Exists(fileLocation))
         {
-            if (kickLoudness >= 0.1f)
-            {
-                kickSpawned = true;
-                var randomPoint = Random.Range(0, spawnPoints.Count - 1);
-                var asteroid = (GameObject)Instantiate(kickPrefab, spawnPoints[randomPoint]);
-            }
+            Debug.Log("File exists");
+            string json = File.ReadAllText(fileLocation);
+            clip = JsonUtility.FromJson<ClipData>(json);
+            return clip.times;
         }
         else
         {
-            if (kickLoudness < 0.1f) kickSpawned = false;
+            Debug.LogError($"No such file found: {fileLocation}");
         }
-    }
-    private void SpawnMidAsteroids()
-    {
-        var midLoudness = midChannel.GetComponent<AudioFrecuency>().clipLoudness;
 
-        if (!midSpawned)
+        return new List<float>();
+    }
+
+    private List<float> LoadMidDataFromJson()
+    {
+        string fileLocation = $"{directory}/{songFolder}/{midName}.txt";
+
+        ClipData clip = new ClipData();
+
+        if (File.Exists(fileLocation))
         {
-            if (midLoudness >= 0.1f)
-            {
-                midSpawned = true;
-                var randomPoint = Random.Range(0, spawnPoints.Count - 1);
-                var asteroid = (GameObject)Instantiate(midPrefab, spawnPoints[randomPoint]);
-            }
+            Debug.Log("File exists");
+            string json = File.ReadAllText(fileLocation);
+            clip = JsonUtility.FromJson<ClipData>(json);
+            return clip.times;
         }
         else
         {
-            if (midLoudness < 0.1f) midSpawned = false;
+            Debug.LogError($"No such file found: {fileLocation}");
+        }
+
+        return new List<float>();
+    }
+
+    private IEnumerator SpawnKicks()
+    {
+        yield return new WaitForSeconds(kickTimer[0]);
+        var randomPoint = Random.Range(0, spawnPoints.Count - 1);
+        var asteroid = (GameObject)Instantiate(kickPrefab, spawnPoints[randomPoint]);
+
+        for (int i = 1; i < kickTimer.Count; i++)
+        {
+            yield return new WaitForSeconds(kickTimer[i] - kickTimer[i - 1]);
+            randomPoint = Random.Range(0, spawnPoints.Count - 1);
+            asteroid = (GameObject)Instantiate(kickPrefab, spawnPoints[randomPoint]);
         }
     }
 
+    private IEnumerator SpawnClaps()
+    {
+        yield return new WaitForSeconds(clapTimer[0]);
+        var randomPoint = Random.Range(0, spawnPoints.Count - 1);
+        var asteroid = (GameObject)Instantiate(clapPrefab, spawnPoints[randomPoint]);
+
+        for (int i = 1; i < clapTimer.Count; i++)
+        {
+            yield return new WaitForSeconds(clapTimer[i] - clapTimer[i - 1]);
+            randomPoint = Random.Range(0, spawnPoints.Count - 1);
+            asteroid = (GameObject)Instantiate(clapPrefab, spawnPoints[randomPoint]);
+        }
+    }
+
+    private IEnumerator SpawnMids()
+    {
+        yield return new WaitForSeconds(midTimer[0]);
+        var randomPoint = Random.Range(0, spawnPoints.Count - 1);
+        var asteroid = (GameObject)Instantiate(midPrefab, spawnPoints[randomPoint]);
+
+        for (int i = 1; i < midTimer.Count; i++)
+        {
+            yield return new WaitForSeconds(midTimer[i] - midTimer[i - 1]);
+            randomPoint = Random.Range(0, spawnPoints.Count - 1);
+            asteroid = (GameObject)Instantiate(midPrefab, spawnPoints[randomPoint]);
+        }
+    }
+
+    //private void SpawnClapAsteroids()
+    //{
+    //    var clapLoudness = clapChannel.GetComponent<AudioFrecuency>().clipLoudness;
+
+    //    if (!clapSpawned)
+    //    {
+    //        if (clapLoudness >= 0.1f)
+    //        {
+    //            clapSpawned = true;
+    //            var randomPoint = Random.Range(0, spawnPoints.Count - 1);
+    //            var asteroid = (GameObject)Instantiate(clapPrefab, spawnPoints[randomPoint]);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        if (clapLoudness < 0.1f) clapSpawned = false;
+    //    }
+    //}
+
+    //private void SpawnKickAsteroids()
+    //{
+    //    var kickLoudness = kickChannel.GetComponent<AudioFrecuency>().clipLoudness;
+
+    //    if (!kickSpawned)
+    //    {
+    //        if (kickLoudness >= 0.1f)
+    //        {
+    //            kickSpawned = true;
+    //            var randomPoint = Random.Range(0, spawnPoints.Count - 1);
+    //            var asteroid = (GameObject)Instantiate(kickPrefab, spawnPoints[randomPoint]);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        if (kickLoudness < 0.1f) kickSpawned = false;
+    //    }
+    //}
+    //private void SpawnMidAsteroids()
+    //{
+    //    var midLoudness = midChannel.GetComponent<AudioFrecuency>().clipLoudness;
+
+    //    if (!midSpawned)
+    //    {
+    //        if (midLoudness >= 0.1f)
+    //        {
+    //            midSpawned = true;
+    //            var randomPoint = Random.Range(0, spawnPoints.Count - 1);
+    //            var asteroid = (GameObject)Instantiate(midPrefab, spawnPoints[randomPoint]);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        if (midLoudness < 0.1f) midSpawned = false;
+    //    }
+    //}
 }

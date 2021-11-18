@@ -12,6 +12,8 @@ public class SongReadyToSend : MonoBehaviour
 
     public void JumpToGamePlayScene()
     {
-        SceneManager.LoadScene("GamePlayScene"); 
+        SceneManager.LoadScene("GamePlayScene");
+        GetComponent<AudioSource>().Play();
+        Debug.Log(GetComponent<AudioSource>().clip.length);
     }
 }

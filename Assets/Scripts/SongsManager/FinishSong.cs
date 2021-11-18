@@ -17,7 +17,7 @@ public class FinishSong : MonoBehaviour
     {
         time = 0.0f;
         songObject = GameObject.Find("Song");
-        songTime = songObject.GetComponent<AudioSource>().clip.length - 10;
+        songTime = songObject.GetComponent<AudioSource>().clip.length;
     }
 
     // Update is called once per frame
