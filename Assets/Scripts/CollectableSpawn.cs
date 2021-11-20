@@ -13,13 +13,14 @@ public class CollectableSpawn : MonoBehaviour
 
     private GameObject songObject;
 
-    private string directory = "Assets/Music/SongsData";
+    private string directory;
     private string songFolder;
     private string beatName;
 
     // Start is called before the first frame update
     void Start()
     {
+        directory = $"{Application.persistentDataPath}/SaveData/";
         songObject = GameObject.Find("Song");
         songFolder = songObject.GetComponent<AudioSource>().clip.name;
         beatName = "Beats - " + songFolder;

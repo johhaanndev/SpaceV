@@ -24,7 +24,7 @@ public class PercussionSpawner : MonoBehaviour
     public GameObject clapPrefab;
     public GameObject midPrefab;
 
-    private string directory = "Assets/Music/SongsData";
+    private string directory;
     private string songFolder;
     private string kickName;
     private string clapName;
@@ -33,6 +33,7 @@ public class PercussionSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        directory = $"{Application.persistentDataPath}/SaveData/";
         song = GameObject.Find("Song");
         songFolder = song.GetComponent<AudioSource>().clip.name;
         kickName = "Kicks - " + songFolder;
