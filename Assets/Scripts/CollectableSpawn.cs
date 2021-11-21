@@ -5,9 +5,6 @@ using UnityEngine;
 
 public class CollectableSpawn : MonoBehaviour
 {
-    //public GameObject beatsChannel;
-    //private bool beatsSpawned;
-
     public GameObject beatPrefab;
     public List<float> beatTimers;
 
@@ -20,7 +17,7 @@ public class CollectableSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        directory = $"{Application.persistentDataPath}/SaveData/";
+        directory = $"{Application.streamingAssetsPath}/SongsData/";
         songObject = GameObject.Find("Song");
         songFolder = songObject.GetComponent<AudioSource>().clip.name;
         beatName = "Beats - " + songFolder;
@@ -47,9 +44,9 @@ public class CollectableSpawn : MonoBehaviour
                                       0f);
 
             asteroid = (GameObject)Instantiate(beatPrefab, randomPoint, Quaternion.identity);
-
         }
     }
+
 
     private List<float> LoadDataFromJson()
     {
