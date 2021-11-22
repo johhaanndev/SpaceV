@@ -8,7 +8,7 @@ public static class SaveManager
 
     public static void Save(ClipData clip)
     {
-        //Debug.Log("Saved!");
+        Debug.Log("Saved!");
         string dir = Application.persistentDataPath + directory;
 
         if (!Directory.Exists(dir))

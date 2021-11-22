@@ -30,7 +30,6 @@ public class SaveSongData : MonoBehaviour
         else
         {
             SaveManager.Save(clipData);
-            Debug.Log(clipData.times);
         }
     }
 

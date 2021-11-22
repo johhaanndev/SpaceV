@@ -90,19 +90,26 @@
      <None Include="Assets\StreamingAssets\SongsData\Lie - Infraction\Beats - Lie - Infraction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Animal - Debris &amp; RudeLies\Mids - Animal - Debris &amp; RudeLies.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI\Kicks - Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\Ropes - Dirty Palm\Beats - Ropes - Dirty Palm.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI\Mids - Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Invincible Part II - Deaf Kev\Beats - Invincible Part II - Deaf Kev.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Ber Zer Ker - WATEVA\Beats - Ber Zer Ker - WATEVA.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\Ropes - Dirty Palm\Claps - Ropes - Dirty Palm.txt" />
      <None Include="Assets\StreamingAssets\SongsData\No More Tears - Infraction\Kicks - No More Tears - Infraction.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\Superhero In My Sleep - Rival x Asketa &amp; Natan Chaim\Mids - Superhero In My Sleep - Rival x Asketa &amp; Natan Chaim.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\Superhero In My Sleep - Rival x Asketa &amp; Natan Chaim\Claps - Superhero In My Sleep - Rival x Asketa &amp; Natan Chaim.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\Ropes - Dirty Palm\Kicks - Ropes - Dirty Palm.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI\Claps - Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Skyline View - Infraction\Kicks - Skyline View - Infraction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Mad At Chu - Infraction X Jinaction\Kicks - Mad At Chu - Infraction X Jinaction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Mad At Chu - Infraction X Jinaction\Mids - Mad At Chu - Infraction X Jinaction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Mad At Chu - Infraction X Jinaction\Claps - Mad At Chu - Infraction X Jinaction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Lie - Infraction\Claps - Lie - Infraction.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\Superhero In My Sleep - Rival x Asketa &amp; Natan Chaim\Beats - Superhero In My Sleep - Rival x Asketa &amp; Natan Chaim.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Lie - Infraction\Kicks - Lie - Infraction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Cyberpunk - Max Brhon\Beats - Cyberpunk - Max Brhon.txt" />
      <None Include="Assets\StreamingAssets\SongsData\No More Tears - Infraction\Mids - No More Tears - Infraction.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\Superhero In My Sleep - Rival x Asketa &amp; Natan Chaim\Kicks - Superhero In My Sleep - Rival x Asketa &amp; Natan Chaim.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI\Beats - Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI.txt" />
      <None Include="Assets\StreamingAssets\SongsData\No More Tears - Infraction\Claps - No More Tears - Infraction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\No More Tears - Infraction\Beats - No More Tears - Infraction.txt" />
@@ -123,6 +130,7 @@
      <None Include="Assets\StreamingAssets\SongsData\Diamond - NIVIRO\Beats - Diamond - NIVIRO.txt" />
      <None Include="Assets\StreamingAssets\SongsData\I Wish - Roy Knox\Claps - I Wish - Roy Knox.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Cyberpunk - Max Brhon\Claps - Cyberpunk - Max Brhon.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\Ropes - Dirty Palm\Mids - Ropes - Dirty Palm.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Ber Zer Ker - WATEVA\Kicks - Ber Zer Ker - WATEVA.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:\Unity\2020.2.4f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

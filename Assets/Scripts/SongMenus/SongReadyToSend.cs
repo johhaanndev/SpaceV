@@ -14,6 +14,6 @@ public class SongReadyToSend : MonoBehaviour
     {
         SceneManager.LoadScene("GamePlayScene");
         GetComponent<AudioSource>().Play();
-        Debug.Log(GetComponent<AudioSource>().clip.length);
+        //Debug.Log(GetComponent<AudioSource>().clip.length);
     }
 }
