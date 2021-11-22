@@ -81,6 +81,8 @@
      <None Include="Assets\StreamingAssets\SongsData\Ber Zer Ker - WATEVA\Claps - Ber Zer Ker - WATEVA.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Lie - Infraction\Mids - Lie - Infraction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Cyberpunk - Max Brhon\Mids - Cyberpunk - Max Brhon.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\What You Like - Curbi\Beats - What You Like - Curbi.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\What You Like - Curbi\Mids - What You Like - Curbi.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Animal - Debris &amp; RudeLies\Kicks - Animal - Debris &amp; RudeLies.txt" />
      <None Include="Assets\StreamingAssets\SongsData\I Wish - Roy Knox\Kicks - I Wish - Roy Knox.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Diamond - NIVIRO\Kicks - Diamond - NIVIRO.txt" />
@@ -91,6 +93,7 @@
      <None Include="Assets\StreamingAssets\SongsData\Animal - Debris &amp; RudeLies\Mids - Animal - Debris &amp; RudeLies.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI\Kicks - Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Ropes - Dirty Palm\Beats - Ropes - Dirty Palm.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\What You Like - Curbi\Kicks - What You Like - Curbi.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI\Mids - Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Invincible Part II - Deaf Kev\Beats - Invincible Part II - Deaf Kev.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Ber Zer Ker - WATEVA\Beats - Ber Zer Ker - WATEVA.txt" />
@@ -106,6 +109,7 @@
      <None Include="Assets\StreamingAssets\SongsData\Mad At Chu - Infraction X Jinaction\Claps - Mad At Chu - Infraction X Jinaction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Lie - Infraction\Claps - Lie - Infraction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Superhero In My Sleep - Rival x Asketa &amp; Natan Chaim\Beats - Superhero In My Sleep - Rival x Asketa &amp; Natan Chaim.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\What You Like - Curbi\Claps - What You Like - Curbi.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Lie - Infraction\Kicks - Lie - Infraction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Cyberpunk - Max Brhon\Beats - Cyberpunk - Max Brhon.txt" />
      <None Include="Assets\StreamingAssets\SongsData\No More Tears - Infraction\Mids - No More Tears - Infraction.txt" />
