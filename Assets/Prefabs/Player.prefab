@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7917185237846152836}
-  - component: {fileID: 7917185237846152839}
   - component: {fileID: 7917185237846152837}
+  - component: {fileID: 7917185237846152839}
   - component: {fileID: 1156155806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -34,24 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7917185237846152839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7917185237846152838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f71e554da8482c42a728f3c06ae0ed2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  angleOffset: 270
-  movForce: 150
-  deathParticles: {fileID: 1883267948008586083, guid: a1165fc990257bb4788994d7de2a3790, type: 3}
-  musicStop: {fileID: 0}
-  gameOverSong: {fileID: 0}
-  gameOverCanvas: {fileID: 0}
 --- !u!50 &7917185237846152837
 Rigidbody2D:
   serializedVersion: 4
@@ -73,6 +55,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7917185237846152839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7917185237846152838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f71e554da8482c42a728f3c06ae0ed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angleOffset: 270
+  movForce: 200
+  deathParticles: {fileID: 1883267948008586083, guid: a1165fc990257bb4788994d7de2a3790, type: 3}
+  musicStop: {fileID: 0}
+  gameOverSong: {fileID: 0}
+  gameOverCanvas: {fileID: 0}
+  cameraShake: {fileID: 0}
+  shakeDuration: 0
+  shakeMagnitude: 0
 --- !u!114 &1156155806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,8 +92,9 @@ MonoBehaviour:
   onCooldown: {fileID: 0}
   destroyerArea: {fileID: 2501553660285995894, guid: 636f48cd7f5cc4e41a6d44c3019bdea2, type: 3}
   cooldownText: {fileID: 0}
-  cost: 10
-  cooldown: 3
+  cost: 50
+  cooldown: 10
+  pulseWarning: {fileID: 0}
 --- !u!1 &7917185237954925731
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,7 +107,7 @@ GameObject:
   - component: {fileID: 7917185237954925728}
   - component: {fileID: 7917185237954925741}
   - component: {fileID: 7917185237954925742}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ship
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -162,7 +166,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1273949139
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1e6def84022c1344bb855db030c37e1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -214,7 +218,7 @@ TrailRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1273949139
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Time: 1
   m_Parameters:

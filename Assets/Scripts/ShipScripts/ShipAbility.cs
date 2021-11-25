@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ShipAbility : MonoBehaviour
 {
     private ScoreManager scoreManager;
-    
+
     public GameObject notMineralEnough;
     public GameObject onCooldown;
     public GameObject destroyerArea;
@@ -19,11 +19,18 @@ public class ShipAbility : MonoBehaviour
     public float cooldown;
     private float timer;
 
+    public GameObject pulseWarning;
+    private Animator pulseAnim;
+    public GameObject pulseIcon;
+    private Animator pulseIconAnim;
+
     // Start is called before the first frame update
     void Start()
     {
-        scoreManager = GameObject.Find("ScoreCanvas").GetComponent<ScoreManager>();
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         ship = gameObject.GetComponentInParent<ShipMovement>();
+        pulseAnim = pulseWarning.GetComponent<Animator>();
+        pulseIconAnim = pulseIcon.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -35,7 +42,13 @@ public class ShipAbility : MonoBehaviour
             if (timer <= 0f)
             {
                 timer = 0f;
+                if (scoreManager.GetMineralCount() >= cost)
+                {
+                    pulseAnim.SetBool("isFull", true);
+                    pulseIconAnim.SetBool("isAvailable", true);
+                }
             }
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (timer > 0f)
@@ -50,6 +63,8 @@ public class ShipAbility : MonoBehaviour
                         var destroyer = (GameObject)Instantiate(destroyerArea, transform.position, transform.rotation);
                         scoreManager.SubstractMineral(cost);
                         timer = cooldown;
+                        pulseAnim.SetBool("isFull", false);
+                        pulseIconAnim.SetBool("isAvailable", false);
                     }
                     else
                     {
@@ -60,7 +75,14 @@ public class ShipAbility : MonoBehaviour
             }
         }
 
-        cooldownText.GetComponent<Text>().text = $"COOLDOWN: {(int)timer}"; 
+        if ((int)timer > 0)
+        {
+            cooldownText.GetComponent<Text>().text = $"{(int)timer}";
+        }
+        else if ((int)timer == 0)
+        {
+            cooldownText.GetComponent<Text>().text = string.Empty;
+        }
     }
 
     private void DeactivateNotMineralEnoughtGameObject()

@@ -30,18 +30,18 @@ public class ScoreManager : MonoBehaviour
         if (ship.GetAlive())
         {
             timeCounter += Time.deltaTime;
-            if (timeCounter >= 0.1)
+            if (timeCounter >= 0.1 && !GameObject.Find("ScoreManager").GetComponent<FinishSong>().isWin)
             {
                 score++;
                 timeCounter = 0;
             }
         }
         mineralBar.fillAmount = mineralCount / abilityCost;
-        ShowScoreHUD();
-        ShowMineralHUD();
+        UpdateScoreHUD();
+        UpdateMineralHUD();
     }
 
-    private void ShowScoreHUD()
+    private void UpdateScoreHUD()
     {
         if (score < 10)
         {
@@ -69,19 +69,19 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    private void ShowMineralHUD()
+    private void UpdateMineralHUD()
     {
         if (mineralCount < 10)
         {
-            mineralText.GetComponent<Text>().text = $"Minerals: 00{mineralCount}";
+            mineralText.GetComponent<Text>().text = $"00{mineralCount}";
         }
         else if (mineralCount < 100)
         {
-            mineralText.GetComponent<Text>().text = $"Minerals: 0{mineralCount}";
+            mineralText.GetComponent<Text>().text = $"0{mineralCount}";
         }
         else if (mineralCount < 1000)
         {
-            mineralText.GetComponent<Text>().text = $"Minerals: {mineralCount}";
+            mineralText.GetComponent<Text>().text = $"{mineralCount}";
         }
     }
 
@@ -99,5 +99,10 @@ public class ScoreManager : MonoBehaviour
     public float GetMineralCount()
     {
         return mineralCount;
+    }
+
+    public float GetScore()
+    {
+        return score;
     }
 }

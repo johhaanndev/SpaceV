@@ -38,7 +38,6 @@ public class CollectableSpawn : MonoBehaviour
         for (int i = 1; i < beatTimers.Count; i++)
         {
             yield return new WaitForSeconds(beatTimers[i] - beatTimers[i - 1]);
-            Debug.Log("Beat");
             randomPoint = new Vector3(Random.Range(-7, 7),
                                       Random.Range(-4, 4),
                                       0f);

@@ -69,17 +69,21 @@
     <Compile Include="Assets\Scripts\AsteroidsControllers\PercussionSpawner.cs" />
     <Compile Include="Assets\Scripts\ParticlesController.cs" />
     <Compile Include="Assets\Scripts\AsteroidsControllers\AsteroidController.cs" />
+    <Compile Include="Assets\Scripts\Multimedia\CameraShake.cs" />
     <Compile Include="Assets\Scripts\SaveSongData\SaveManager.cs" />
+    <Compile Include="Assets\Scripts\Multimedia\PlayVideo.cs" />
     <Compile Include="Assets\Scripts\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\AudioFrecuency.cs" />
     <Compile Include="Assets\Scripts\SongMenus\SongReadyToSend.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
+    <Compile Include="Assets\Scripts\Multimedia\MenuSongPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\StreamingAssets\SongsData\Midnight Cyberpunk - MOKKA\Beats - Midnight Cyberpunk - MOKKA.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Midnight Cyberpunk - MOKKA\Claps - Midnight Cyberpunk - MOKKA.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Ber Zer Ker - WATEVA\Claps - Ber Zer Ker - WATEVA.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Lie - Infraction\Mids - Lie - Infraction.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\TUTORIAL - Show Me - LiQWYD\Mids - TUTORIAL - Show Me - LiQWYD.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Cyberpunk - Max Brhon\Mids - Cyberpunk - Max Brhon.txt" />
      <None Include="Assets\StreamingAssets\SongsData\What You Like - Curbi\Beats - What You Like - Curbi.txt" />
      <None Include="Assets\StreamingAssets\SongsData\What You Like - Curbi\Mids - What You Like - Curbi.txt" />
@@ -94,6 +98,7 @@
      <None Include="Assets\StreamingAssets\SongsData\Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI\Kicks - Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Ropes - Dirty Palm\Beats - Ropes - Dirty Palm.txt" />
      <None Include="Assets\StreamingAssets\SongsData\What You Like - Curbi\Kicks - What You Like - Curbi.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\TUTORIAL - Show Me - LiQWYD\Beats - TUTORIAL - Show Me - LiQWYD.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI\Mids - Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Invincible Part II - Deaf Kev\Beats - Invincible Part II - Deaf Kev.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Ber Zer Ker - WATEVA\Beats - Ber Zer Ker - WATEVA.txt" />
@@ -104,6 +109,7 @@
      <None Include="Assets\StreamingAssets\SongsData\Ropes - Dirty Palm\Kicks - Ropes - Dirty Palm.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI\Claps - Evolution - Clarx, Derbis, 3rd Prototype, Castion, EMDI.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Skyline View - Infraction\Kicks - Skyline View - Infraction.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\TUTORIAL - Show Me - LiQWYD\Claps - TUTORIAL - Show Me - LiQWYD.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Mad At Chu - Infraction X Jinaction\Kicks - Mad At Chu - Infraction X Jinaction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Mad At Chu - Infraction X Jinaction\Mids - Mad At Chu - Infraction X Jinaction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Mad At Chu - Infraction X Jinaction\Claps - Mad At Chu - Infraction X Jinaction.txt" />
@@ -122,6 +128,7 @@
      <None Include="Assets\StreamingAssets\SongsData\Midnight Cyberpunk - MOKKA\Mids - Midnight Cyberpunk - MOKKA.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Skyline View - Infraction\Claps - Skyline View - Infraction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Ber Zer Ker - WATEVA\Mids - Ber Zer Ker - WATEVA.txt" />
+     <None Include="Assets\StreamingAssets\SongsData\TUTORIAL - Show Me - LiQWYD\Kicks - TUTORIAL - Show Me - LiQWYD.txt" />
      <None Include="Assets\StreamingAssets\SongsData\I Wish - Roy Knox\Mids - I Wish - Roy Knox.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Mad At Chu - Infraction X Jinaction\Beats - Mad At Chu - Infraction X Jinaction.txt" />
      <None Include="Assets\StreamingAssets\SongsData\Invincible Part II - Deaf Kev\Mids - Invincible Part II - Deaf Kev.txt" />

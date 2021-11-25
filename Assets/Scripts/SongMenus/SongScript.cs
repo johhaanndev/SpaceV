@@ -25,5 +25,11 @@ public class SongScript : MonoBehaviour
         var songObject = GameObject.Find($"Send {songName}");
         trackSelected = songObject.GetComponent<AudioSource>();
         sendSong.GetComponent<AudioSource>().clip = trackSelected.clip;
+        var audios = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource audio in audios)
+        {
+            audio.Stop();
+        }
+        GameObject.Find($"Send {songName}").GetComponent<AudioSource>().Play();
     }
 }

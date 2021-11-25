@@ -21,6 +21,10 @@ public class ShipMovement : MonoBehaviour
 
     public GameObject gameOverCanvas;
 
+    public GameObject cameraShake;
+    public float shakeDuration;
+    public float shakeMagnitude;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -59,6 +63,7 @@ public class ShipMovement : MonoBehaviour
 
     private void GameOver()
     {
+        StartCoroutine(cameraShake.GetComponent<CameraShake>().Shake(shakeDuration, shakeMagnitude));
         gameOverCanvas.SetActive(true);
         var particles = (GameObject)Instantiate(deathParticles, transform.position, transform.rotation);
         spriteRenderer.enabled = false;
