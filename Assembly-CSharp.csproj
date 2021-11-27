@@ -74,9 +74,10 @@
     <Compile Include="Assets\Scripts\Multimedia\PlayVideo.cs" />
     <Compile Include="Assets\Scripts\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\AudioFrecuency.cs" />
+    <Compile Include="Assets\Scripts\Multimedia\MenuSongPlayer.cs" />
     <Compile Include="Assets\Scripts\SongMenus\SongReadyToSend.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawn.cs" />
-    <Compile Include="Assets\Scripts\Multimedia\MenuSongPlayer.cs" />
+    <Compile Include="Assets\Scripts\introScene.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\StreamingAssets\SongsData\Midnight Cyberpunk - MOKKA\Beats - Midnight Cyberpunk - MOKKA.txt" />
