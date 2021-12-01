@@ -14,6 +14,7 @@ public class FinishSong : MonoBehaviour
     private ScoreManager scoreManager;
 
     private GameObject songObject;
+    private GameObject playerObject;
 
     private float songTime;
 
@@ -23,7 +24,7 @@ public class FinishSong : MonoBehaviour
     void Start()
     {
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
-
+        playerObject = GameObject.Find("Player");
         time = 0.0f;
         songObject = GameObject.Find("Song");
         songTime = songObject.GetComponent<AudioSource>().clip.length;
@@ -33,13 +34,14 @@ public class FinishSong : MonoBehaviour
     void Update()
     {
         time += Time.deltaTime;
-        if (time >= songTime)
+        if (time >= songTime && playerObject.GetComponent<ShipMovement>().GetAlive())
         {
             isWin = true;
             youWinHUD.SetActive(true);
             finalScoreText.text = $"Minerals collected: {scoreManager.GetMineralCount()}\n" +
                                   $"Total score: {scoreManager.GetScore() * (1 + scoreManager.GetMineralCount() / 100)}";
-
+            playerObject.GetComponent<ShipMovement>().enabled = false;
+            playerObject.GetComponent<ShipAbility>().enabled = false;
             scoreHUD.SetActive(false);
         }
     }
