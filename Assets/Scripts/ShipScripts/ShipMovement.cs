@@ -36,7 +36,7 @@ public class ShipMovement : MonoBehaviour
 
     void Update()
     {
-        if (alive)
+        if (alive || !GameObject.Find("ScoreManager").GetComponent<FinishSong>().isWin)
             MoveControls();
     }
 

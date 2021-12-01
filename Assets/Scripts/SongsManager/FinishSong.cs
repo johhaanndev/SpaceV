@@ -38,7 +38,7 @@ public class FinishSong : MonoBehaviour
             isWin = true;
             youWinHUD.SetActive(true);
             finalScoreText.text = $"Minerals collected: {scoreManager.GetMineralCount()}\n" +
-                                  $"Total score: {scoreManager.GetScore()}";
+                                  $"Total score: {scoreManager.GetScore() * (1 + scoreManager.GetMineralCount() / 100)}";
 
             scoreHUD.SetActive(false);
         }

@@ -17,6 +17,7 @@ ScriptsOnlyBuild:
     - SongReadyToSend
     - SongScript
     - SpawnPoint
+    - introScene
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -138,7 +139,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3618}
     - Class: 114
-      Script: {instanceID: 4772}
+      Script: {instanceID: 4774}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -164,6 +165,55 @@ ScriptsOnlyBuild:
     - Class: 328
       Script: {instanceID: 0}
     - Class: 329
+      Script: {instanceID: 0}
+    Assets/Scenes/IntroScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1488}
+    - Class: 114
+      Script: {instanceID: 2450}
+    - Class: 114
+      Script: {instanceID: 2596}
+    - Class: 114
+      Script: {instanceID: 2770}
+    - Class: 114
+      Script: {instanceID: 2984}
+    - Class: 114
+      Script: {instanceID: 3628}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/MusicSelection.unity:
     - Class: 1
@@ -209,11 +259,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3426}
     - Class: 114
-      Script: {instanceID: 3952}
+      Script: {instanceID: 3954}
     - Class: 114
-      Script: {instanceID: 4128}
+      Script: {instanceID: 4130}
     - Class: 114
-      Script: {instanceID: 4648}
+      Script: {instanceID: 4650}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -659,6 +709,12 @@ ScriptsOnlyBuild:
     className: SpawnPoint
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: introScene
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -863,6 +919,7 @@ ScriptsOnlyBuild:
     className: FabrikSolver2D
   platform: 5
   scenePathNames:
+  - Assets/Scenes/IntroScene.unity
   - Assets/Scenes/MusicSelection.unity
   - Assets/Scenes/GamePlayScene.unity
-  playerPath: D:/GitHub/SpaceV-exe/PointerAsteriods.exe
+  playerPath: D:/GitHub/SpaceV-exe/SpaceV.exe
