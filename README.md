@@ -1,3 +1,5 @@
+outdated
+
 # SpaceV
 
 Space V will be an arcade quick game that rocks at the beat of the music.
