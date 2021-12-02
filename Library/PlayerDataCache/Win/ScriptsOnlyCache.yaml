@@ -22,6 +22,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -423,7 +424,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 789e9562a042c11339f00836d11fb2d5
+      Hash: 1ad55305ec3d295068e4f723be3e683a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SongScript
@@ -930,4 +931,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/IntroScene.unity
   - Assets/Scenes/MusicSelection.unity
   - Assets/Scenes/GamePlayScene.unity
-  playerPath: D:/GitHub/SpaceV-exe/SpaceV.exe
+  playerPath: D:/GitHub/SpaceV-exe-workaround/SpaceV.exe

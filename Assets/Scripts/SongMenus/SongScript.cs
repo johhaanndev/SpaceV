@@ -9,7 +9,8 @@ public class SongScript : MonoBehaviour
     private GameObject sendSong;
 
     public string songName;
-    public AudioSource trackSelected;
+    public AudioClip trackSelected;
+    public AudioSource trackSource;
 
     private void Start()
     {
@@ -17,19 +18,24 @@ public class SongScript : MonoBehaviour
         {
             sendSong = GameObject.Find("Song");
         }
+        trackSource = GetComponent<AudioSource>();
     }
 
     public void SelectSong()
     {
         songName = EventSystem.current.currentSelectedGameObject.name;
         var songObject = GameObject.Find($"Send {songName}");
-        trackSelected = songObject.GetComponent<AudioSource>();
-        sendSong.GetComponent<AudioSource>().clip = trackSelected.clip;
+        
+        // Find mp3 in folders
+        trackSelected = Resources.Load($"Songs/{songName}") as AudioClip;
+        trackSource.clip = trackSelected;
+        // trackSelected = songObject.GetComponent<AudioSource>();
+        sendSong.GetComponent<AudioSource>().clip = trackSelected;
         var audios = FindObjectsOfType<AudioSource>();
         foreach (AudioSource audio in audios)
         {
             audio.Stop();
         }
-        GameObject.Find($"Send {songName}").GetComponent<AudioSource>().Play();
+        trackSource.Play();
     }
 }
