@@ -22,7 +22,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -100,49 +99,49 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1488}
+      Script: {instanceID: 1492}
     - Class: 114
-      Script: {instanceID: 1776}
+      Script: {instanceID: 1780}
     - Class: 114
-      Script: {instanceID: 2054}
+      Script: {instanceID: 2058}
     - Class: 114
-      Script: {instanceID: 2076}
+      Script: {instanceID: 2080}
     - Class: 114
-      Script: {instanceID: 2126}
+      Script: {instanceID: 2130}
     - Class: 114
-      Script: {instanceID: 2232}
+      Script: {instanceID: 2236}
     - Class: 114
-      Script: {instanceID: 2328}
+      Script: {instanceID: 2332}
     - Class: 114
-      Script: {instanceID: 2342}
+      Script: {instanceID: 2346}
     - Class: 114
-      Script: {instanceID: 2450}
+      Script: {instanceID: 2454}
     - Class: 114
-      Script: {instanceID: 2596}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 2738}
+      Script: {instanceID: 2742}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 2812}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 2964}
+      Script: {instanceID: 2968}
     - Class: 114
-      Script: {instanceID: 2984}
+      Script: {instanceID: 2988}
     - Class: 114
-      Script: {instanceID: 3028}
+      Script: {instanceID: 3032}
     - Class: 114
-      Script: {instanceID: 3088}
+      Script: {instanceID: 3092}
     - Class: 114
-      Script: {instanceID: 3112}
+      Script: {instanceID: 3116}
     - Class: 114
-      Script: {instanceID: 3302}
+      Script: {instanceID: 3306}
     - Class: 114
-      Script: {instanceID: 3604}
+      Script: {instanceID: 3608}
     - Class: 114
-      Script: {instanceID: 3618}
+      Script: {instanceID: 3622}
     - Class: 114
-      Script: {instanceID: 4774}
+      Script: {instanceID: 4778}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -193,17 +192,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1488}
+      Script: {instanceID: 1492}
     - Class: 114
-      Script: {instanceID: 2450}
+      Script: {instanceID: 2454}
     - Class: 114
-      Script: {instanceID: 2596}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 2984}
+      Script: {instanceID: 2988}
     - Class: 114
-      Script: {instanceID: 3628}
+      Script: {instanceID: 3632}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -246,33 +245,33 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1488}
+      Script: {instanceID: 1492}
     - Class: 114
-      Script: {instanceID: 2076}
+      Script: {instanceID: 2080}
     - Class: 114
-      Script: {instanceID: 2212}
+      Script: {instanceID: 2216}
     - Class: 114
-      Script: {instanceID: 2450}
+      Script: {instanceID: 2454}
     - Class: 114
-      Script: {instanceID: 2596}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2774}
     - Class: 114
-      Script: {instanceID: 2984}
+      Script: {instanceID: 2988}
     - Class: 114
-      Script: {instanceID: 2992}
+      Script: {instanceID: 2996}
     - Class: 114
-      Script: {instanceID: 3088}
+      Script: {instanceID: 3092}
     - Class: 114
-      Script: {instanceID: 3282}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 3426}
+      Script: {instanceID: 3430}
     - Class: 114
-      Script: {instanceID: 3954}
+      Script: {instanceID: 3958}
     - Class: 114
-      Script: {instanceID: 4130}
+      Script: {instanceID: 4134}
     - Class: 114
-      Script: {instanceID: 4650}
+      Script: {instanceID: 4654}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -931,4 +930,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/IntroScene.unity
   - Assets/Scenes/MusicSelection.unity
   - Assets/Scenes/GamePlayScene.unity
-  playerPath: D:/GitHub/SpaceV-exe-workaround/SpaceV.exe
+  playerPath: D:/GitHub/SpaceV-exe/SpaceV.exe
