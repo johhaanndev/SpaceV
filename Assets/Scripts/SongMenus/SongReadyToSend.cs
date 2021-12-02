@@ -16,7 +16,6 @@ public class SongReadyToSend : MonoBehaviour
     {
         if (GetComponent<AudioSource>().clip == null)
         {
-            Debug.Log("No track selected");
             chooseSongText.SetActive(true);
             Invoke(nameof(DeactivateWarningText), 1.75f);
         }
@@ -24,7 +23,6 @@ public class SongReadyToSend : MonoBehaviour
         {
             SceneManager.LoadScene("GamePlayScene");
             GetComponent<AudioSource>().Play();
-            //Debug.Log(GetComponent<AudioSource>().clip.length);
         }
     }
 
