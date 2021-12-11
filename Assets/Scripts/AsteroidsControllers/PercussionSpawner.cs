@@ -57,7 +57,6 @@ public class PercussionSpawner : MonoBehaviour
 
         if (File.Exists(fileLocation))
         {
-            Debug.Log("File exists");
             string json = File.ReadAllText(fileLocation);
             clip = JsonUtility.FromJson<ClipData>(json);
             return clip.times;
@@ -77,8 +76,7 @@ public class PercussionSpawner : MonoBehaviour
         ClipData clip = new ClipData();
 
         if (File.Exists(fileLocation))
-        {
-            Debug.Log("File exists");
+        {   
             string json = File.ReadAllText(fileLocation);
             clip = JsonUtility.FromJson<ClipData>(json);
             return clip.times;
@@ -99,7 +97,6 @@ public class PercussionSpawner : MonoBehaviour
 
         if (File.Exists(fileLocation))
         {
-            Debug.Log("File exists");
             string json = File.ReadAllText(fileLocation);
             clip = JsonUtility.FromJson<ClipData>(json);
             return clip.times;

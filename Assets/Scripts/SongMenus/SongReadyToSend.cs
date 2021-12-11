@@ -30,4 +30,9 @@ public class SongReadyToSend : MonoBehaviour
     {
         chooseSongText.SetActive(false);
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

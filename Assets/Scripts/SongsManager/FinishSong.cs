@@ -40,6 +40,7 @@ public class FinishSong : MonoBehaviour
             youWinHUD.SetActive(true);
             finalScoreText.text = $"Minerals collected: {scoreManager.GetMineralCount()}\n" +
                                   $"Total score: {scoreManager.GetScore() * (1 + scoreManager.GetMineralCount() / 100)}";
+
             playerObject.GetComponent<ShipMovement>().enabled = false;
             playerObject.GetComponent<ShipAbility>().enabled = false;
             scoreHUD.SetActive(false);

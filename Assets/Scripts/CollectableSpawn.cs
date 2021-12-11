@@ -55,7 +55,6 @@ public class CollectableSpawn : MonoBehaviour
 
         if (File.Exists(fileLocation))
         {
-            Debug.Log("File exists");
             string json = File.ReadAllText(fileLocation);
             clip = JsonUtility.FromJson<ClipData>(json);
             return clip.times;

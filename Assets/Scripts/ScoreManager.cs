@@ -16,12 +16,16 @@ public class ScoreManager : MonoBehaviour
     public Image mineralBar;
     private float abilityCost;
 
+    private TopScoreTransferScript topScoreScript;
+
     // Start is called before the first frame update
     void Start()
     {
         ship = GameObject.Find("Player").GetComponent<ShipMovement>();
         shipAbility = GameObject.Find("Player").GetComponent<ShipAbility>();
         abilityCost = shipAbility.cost;
+
+        topScoreScript = GameObject.Find("TopScoreTransfer").GetComponent<TopScoreTransferScript>();
     }
 
     // Update is called once per frame
@@ -35,6 +39,10 @@ public class ScoreManager : MonoBehaviour
                 score++;
                 timeCounter = 0;
             }
+        }
+        else
+        {
+            topScoreScript.SetFinalScore(score);
         }
         mineralBar.fillAmount = mineralCount / abilityCost;
         UpdateScoreHUD();
