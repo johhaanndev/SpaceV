@@ -3341,7 +3341,6 @@ MonoBehaviour:
   youWinHUD: {fileID: 0}
   finalScoreText: {fileID: 0}
   isWin: 0
-  topScoreScript: {fileID: 0}
 --- !u!1 &1059877187
 GameObject:
   m_ObjectHideFlags: 0
@@ -4499,7 +4498,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1504697378}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 12c33df3ddd2a5e429df0592e525d5df, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 6040a22157a630042bf2bbc62438ae75, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -6078,7 +6077,6 @@ MonoBehaviour:
   youWinHUD: {fileID: 430048103}
   finalScoreText: {fileID: 1076546380}
   isWin: 0
-  topScoreScript: {fileID: 0}
 --- !u!1 &2082267072
 GameObject:
   m_ObjectHideFlags: 0
