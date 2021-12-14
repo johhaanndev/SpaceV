@@ -14,7 +14,6 @@ public class SongScript : MonoBehaviour
     public AudioSource trackSource;
 
     public GameObject topScoreHUD;
-    private float topScore = 0;
 
     private void Start()
     {
@@ -43,13 +42,14 @@ public class SongScript : MonoBehaviour
         trackSource.Play();
 
         topScoreHUD.SetActive(true);
-        topScoreHUD.GetComponentInChildren<Text>().text = $"{songName}\n\nTop score: {topScore}";
-    }
-
-    public void SetTopScore(float score)
-    {
-        Debug.Log("Setting score");
-        if (score > topScore)
-            topScore = score;
+        var topScore = GameObject.Find("SongList").GetComponent<SongsHighScore>().GetMaxScore($"Send {songName}");
+        if (songName.Contains("TUTORIAL"))
+        {
+            topScoreHUD.GetComponentInChildren<Text>().text = $"{songName}\n\nReady to pass the SpaceV test?";
+        }
+        else
+        {
+            topScoreHUD.GetComponentInChildren<Text>().text = $"{songName}\n\nTop score: {topScore}";
+        }
     }
 }

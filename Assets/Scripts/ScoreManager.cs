@@ -42,7 +42,7 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            topScoreScript.SetFinalScore(score);
+            topScoreScript.SetFinalScore(score, GameObject.Find("Song").GetComponent<AudioSource>().clip.name);
         }
         mineralBar.fillAmount = mineralCount / abilityCost;
         UpdateScoreHUD();

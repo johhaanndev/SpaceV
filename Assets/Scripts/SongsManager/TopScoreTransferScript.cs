@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class TopScoreTransferScript : MonoBehaviour
 {
     private float finalScore = 0.0f;
+    private string songName;
 
     private void Start()
     {
@@ -17,20 +18,19 @@ public class TopScoreTransferScript : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Equals("MusicSelection"))
         {
-            Debug.Log("in MenuSelection");
-            var scoreTarget = GameObject.Find("Menu canvas").GetComponent<SongScript>();
-            scoreTarget.SetTopScore(finalScore);
+            var songToSendScore = GameObject.Find("SongList");
+            songToSendScore.GetComponent<SongsHighScore>().SetHighScoreToSong(songName, finalScore);
             Destroy(gameObject);
         }
         else
         {
-            Debug.Log("Not in menu");
+            songName = GameObject.Find("Song").GetComponent<AudioSource>().clip.name;
         }
     }
 
-    public void SetFinalScore(float score)
+    public void SetFinalScore(float score, string songToSend)
     {
-        Debug.Log("Setting final score");
+        songName = songToSend;
         finalScore = score;
     }
 }

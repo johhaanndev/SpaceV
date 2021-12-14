@@ -45,11 +45,8 @@ public class ShipMovement : MonoBehaviour
         var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + angleOffset;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-        if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Z))
-        {
-            rb.AddForce((dir - transform.position) * Time.deltaTime * movForce);
-        }
+        
+        rb.AddForce((dir - transform.position) * Time.deltaTime * movForce);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

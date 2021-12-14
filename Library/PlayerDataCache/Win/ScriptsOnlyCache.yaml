@@ -16,7 +16,9 @@ ScriptsOnlyBuild:
     - ShipMovement
     - SongReadyToSend
     - SongScript
+    - SongsHighScore
     - SpawnPoint
+    - TopScoreTransferScript
     - introScene
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -99,49 +101,51 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1492}
+      Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 1780}
+      Script: {instanceID: 1776}
     - Class: 114
-      Script: {instanceID: 2058}
+      Script: {instanceID: 2054}
     - Class: 114
-      Script: {instanceID: 2080}
+      Script: {instanceID: 2076}
     - Class: 114
-      Script: {instanceID: 2130}
+      Script: {instanceID: 2126}
     - Class: 114
-      Script: {instanceID: 2236}
+      Script: {instanceID: 2232}
     - Class: 114
-      Script: {instanceID: 2332}
+      Script: {instanceID: 2328}
     - Class: 114
-      Script: {instanceID: 2346}
+      Script: {instanceID: 2342}
     - Class: 114
-      Script: {instanceID: 2454}
+      Script: {instanceID: 2450}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2596}
     - Class: 114
-      Script: {instanceID: 2742}
+      Script: {instanceID: 2738}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2770}
     - Class: 114
-      Script: {instanceID: 2816}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 2968}
+      Script: {instanceID: 2964}
     - Class: 114
-      Script: {instanceID: 2988}
+      Script: {instanceID: 2984}
     - Class: 114
-      Script: {instanceID: 3032}
+      Script: {instanceID: 3028}
     - Class: 114
-      Script: {instanceID: 3092}
+      Script: {instanceID: 3088}
     - Class: 114
-      Script: {instanceID: 3116}
+      Script: {instanceID: 3112}
     - Class: 114
-      Script: {instanceID: 3306}
+      Script: {instanceID: 3302}
     - Class: 114
-      Script: {instanceID: 3608}
+      Script: {instanceID: 3606}
     - Class: 114
-      Script: {instanceID: 3622}
+      Script: {instanceID: 3620}
     - Class: 114
       Script: {instanceID: 4778}
+    - Class: 114
+      Script: {instanceID: 5030}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -192,17 +196,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1492}
+      Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 2454}
+      Script: {instanceID: 2450}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2596}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2770}
     - Class: 114
-      Script: {instanceID: 2988}
+      Script: {instanceID: 2984}
     - Class: 114
-      Script: {instanceID: 3632}
+      Script: {instanceID: 3630}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -245,27 +249,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1492}
+      Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 2080}
+      Script: {instanceID: 2076}
     - Class: 114
-      Script: {instanceID: 2216}
+      Script: {instanceID: 2212}
     - Class: 114
-      Script: {instanceID: 2454}
+      Script: {instanceID: 2450}
     - Class: 114
-      Script: {instanceID: 2600}
+      Script: {instanceID: 2596}
     - Class: 114
-      Script: {instanceID: 2774}
+      Script: {instanceID: 2770}
     - Class: 114
-      Script: {instanceID: 2988}
+      Script: {instanceID: 2984}
     - Class: 114
-      Script: {instanceID: 2996}
+      Script: {instanceID: 2992}
     - Class: 114
-      Script: {instanceID: 3092}
+      Script: {instanceID: 3088}
     - Class: 114
-      Script: {instanceID: 3286}
+      Script: {instanceID: 3282}
     - Class: 114
-      Script: {instanceID: 3430}
+      Script: {instanceID: 3426}
+    - Class: 114
+      Script: {instanceID: 3488}
     - Class: 114
       Script: {instanceID: 3958}
     - Class: 114
@@ -423,7 +429,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 1ad55305ec3d295068e4f723be3e683a
+      Hash: 29a1d4a52e16dda964b7e8ce356b7da8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SongScript
@@ -673,6 +679,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: a87f657f1ee2a0e9e071811d21548dcd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SongsHighScore
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -925,6 +937,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TopScoreTransferScript
   platform: 5
   scenePathNames:
   - Assets/Scenes/IntroScene.unity
