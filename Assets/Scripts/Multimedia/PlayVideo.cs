@@ -7,6 +7,8 @@ public class PlayVideo : MonoBehaviour
     [HideInInspector]
     public GameObject songObject;
 
+    public GameObject imageBackground;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,10 @@ public class PlayVideo : MonoBehaviour
         if (!songObject.GetComponent<AudioSource>().clip.name.Equals("TUTORIAL - Show Me - LiQWYD"))
         {
             Destroy(gameObject);
+        }
+        else
+        {
+            imageBackground.SetActive(false);
         }
     }
 }
