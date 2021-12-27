@@ -40,10 +40,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -98,8 +96,6 @@ ScriptsOnlyBuild:
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
-      Script: {instanceID: 0}
-    - Class: 96
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -720,7 +716,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: 1dd96b1c2c6bb6d1c000c1f35a809ef2
+      Hash: c508614ac0bed50869ad01bc5df791ef
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayVideo
