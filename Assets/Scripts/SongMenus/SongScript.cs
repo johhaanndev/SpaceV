@@ -27,7 +27,7 @@ public class SongScript : MonoBehaviour
     public void SelectSong()
     {
         songName = EventSystem.current.currentSelectedGameObject.name;
-        var songObject = GameObject.Find($"Send {songName}");
+        //var songObject = GameObject.Find($"Send {songName}");
         
         // Find mp3 in folders
         trackSelected = Resources.Load($"Songs/{songName}") as AudioClip;
@@ -49,7 +49,7 @@ public class SongScript : MonoBehaviour
         }
         else
         {
-            topScoreHUD.GetComponentInChildren<Text>().text = $"{songName}\n\nTop score: {topScore}";
+            topScoreHUD.GetComponentInChildren<Text>().text = $"{songName}\n\nTop score:\n{topScore}";
         }
     }
 }
